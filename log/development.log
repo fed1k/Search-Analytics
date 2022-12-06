@@ -40649,3 +40649,639 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.6ms | Allocations: 4707)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (24.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Firdavs"], ["created_at", "2022-12-06 13:45:33.807441"], ["updated_at", "2022-12-06 13:45:33.807441"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Emil"], ["created_at", "2022-12-06 13:45:33.848259"], ["updated_at", "2022-12-06 13:45:33.848259"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (9.0ms)[0m  [1m[32mINSERT INTO "articles" ("name", "paragraph", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Rails and Vanilla JS"], ["paragraph", "Lorem ipsum dolor icum"], ["user_id", 1], ["created_at", "2022-12-06 13:45:33.891425"], ["updated_at", "2022-12-06 13:45:33.891425"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("name", "paragraph", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Learning Flutter"], ["paragraph", "Lorem ipsum dolor icum"], ["user_id", 1], ["created_at", "2022-12-06 13:45:33.904831"], ["updated_at", "2022-12-06 13:45:33.904831"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("name", "paragraph", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Debug and clean code"], ["paragraph", "Lorem ipsum dolor icum"], ["user_id", 1], ["created_at", "2022-12-06 13:45:33.909696"], ["updated_at", "2022-12-06 13:45:33.909696"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("name", "paragraph", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Performant SQL queries"], ["paragraph", "Lorem ipsum dolor icum"], ["user_id", 1], ["created_at", "2022-12-06 13:45:33.914782"], ["updated_at", "2022-12-06 13:45:33.914782"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("name", "paragraph", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pratise FreeCodeCamp"], ["paragraph", "Lorem ipsum dolor icum"], ["user_id", 2], ["created_at", "2022-12-06 13:45:33.919098"], ["updated_at", "2022-12-06 13:45:33.919098"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("name", "paragraph", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Follow YouTube Gurus"], ["paragraph", "Lorem ipsum dolor icum"], ["user_id", 2], ["created_at", "2022-12-06 13:45:33.923367"], ["updated_at", "2022-12-06 13:45:33.923367"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("name", "paragraph", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Learning from books"], ["paragraph", "Lorem ipsum dolor icum"], ["user_id", 2], ["created_at", "2022-12-06 13:45:33.927975"], ["updated_at", "2022-12-06 13:45:33.927975"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("name", "paragraph", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Good communication"], ["paragraph", "Lorem ipsum dolor icum"], ["user_id", 2], ["created_at", "2022-12-06 13:45:33.932428"], ["updated_at", "2022-12-06 13:45:33.932428"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2022-12-06 08:45:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users/1/articles
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms | Allocations: 7603)
+
+
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 08:45:56 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.6ms | Allocations: 257)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 40.0ms | Allocations: 36105)
+  Rendered layout layouts/application.html.erb (Duration: 76.8ms | Allocations: 52445)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 7.4ms | Allocations: 59808)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 08:46:06 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.2ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 3011)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 11723)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.8ms | Allocations: 12610)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 08:46:07 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2872)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 12533)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.0ms | Allocations: 13641)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 08:46:07 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2872)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 11930)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.1ms | Allocations: 12326)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 08:46:08 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2873)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 11550)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.9ms | Allocations: 12292)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 08:46:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.6ms | Allocations: 257)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 41.5ms | Allocations: 39114)
+  Rendered layout layouts/application.html.erb (Duration: 63.1ms | Allocations: 53240)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 6.9ms | Allocations: 63389)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 08:46:32 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.2ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3011)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 12434)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.8ms | Allocations: 13282)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/" for ::1 at 2022-12-06 08:46:50 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Redirected to http://[::1]:3000/users/1/articles
+Completed 302 Found in 14ms (ActiveRecord: 0.0ms | Allocations: 7130)
+
+
+Started GET "/users/1/articles" for ::1 at 2022-12-06 08:46:50 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 1.7ms | Allocations: 257)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 35888)
+  Rendered layout layouts/application.html.erb (Duration: 59.5ms | Allocations: 49354)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 7.4ms | Allocations: 55835)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/users/1/articles" for ::1 at 2022-12-06 08:46:52 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.3ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 3010)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 11925)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.8ms | Allocations: 12694)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/users/1/articles" for ::1 at 2022-12-06 08:48:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.8ms | Allocations: 257)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 41.1ms | Allocations: 39118)
+  Rendered layout layouts/application.html.erb (Duration: 94.5ms | Allocations: 67586)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 5.8ms | Allocations: 77520)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:3
+Started GET "/users/1/articles" for ::1 at 2022-12-06 08:49:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.5ms | Allocations: 257)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 38.0ms | Allocations: 39118)
+  Rendered layout layouts/application.html.erb (Duration: 121.3ms | Allocations: 76081)
+Completed 200 OK in 142ms (Views: 121.8ms | ActiveRecord: 6.0ms | Allocations: 86056)
+
+
+Started GET "/users/1/articles" for ::1 at 2022-12-06 08:49:27 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3019)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 5071)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.8ms | Allocations: 5548)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-06 08:56:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users/1/articles
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms | Allocations: 7130)
+
+
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 08:56:31 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.6ms | Allocations: 257)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 33.5ms | Allocations: 35892)
+  Rendered layout layouts/application.html.erb (Duration: 71.9ms | Allocations: 63355)
+Completed 200 OK in 88ms (Views: 72.3ms | ActiveRecord: 5.9ms | Allocations: 69806)
+
+
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 08:56:33 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2982)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5000)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.7ms | Allocations: 5450)
+
+
+Started GET "/users/1/anals" for 127.0.0.1 at 2022-12-06 08:56:34 -0500
+Processing by AnalsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mAnal Load (0.3ms)[0m  [1m[34mSELECT "anals".* FROM "anals" WHERE "anals"."user_id" = $1 ORDER BY count DESC[0m  [["user_id", 1]]
+  ↳ app/controllers/anals_controller.rb:7:in `uniq'
+  Rendering layout layouts/application.html.erb
+  Rendering anals/index.html.erb within layouts/application
+  Rendered anals/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2210)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2302)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.3ms | Allocations: 6492)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    10:   <% else %>
+    11:     <h3>Nothing searched yet😥</h3>
+    12:   <% end %>
+    13:   <%= link_to "Clear", @anals.destroy_all %>
+    14: </div>
+  
+app/views/anals/index.html.erb:13
+Started GET "/users/1/anals" for 127.0.0.1 at 2022-12-06 08:59:23 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnalsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mAnal Load (0.8ms)[0m  [1m[34mSELECT "anals".* FROM "anals" WHERE "anals"."user_id" = $1 ORDER BY count DESC[0m  [["user_id", 1]]
+  ↳ app/controllers/anals_controller.rb:7:in `uniq'
+  Rendering layout layouts/application.html.erb
+  Rendering anals/index.html.erb within layouts/application
+  Rendered anals/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3701)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3805)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.4ms | Allocations: 15699)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy_all", :controller=>"anals", :method=>:delete, :user_id=>"1"}):
+    10:   <% else %>
+    11:     <h3>Nothing searched yet😥</h3>
+    12:   <% end %>
+    13:   <%= link_to "Clear", :action => 'destroy_all', :method => :delete %>
+    14: </div>
+  
+app/views/anals/index.html.erb:13
+Started GET "/users/1/anals" for 127.0.0.1 at 2022-12-06 08:59:25 -0500
+Processing by AnalsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mAnal Load (0.5ms)[0m  [1m[34mSELECT "anals".* FROM "anals" WHERE "anals"."user_id" = $1 ORDER BY count DESC[0m  [["user_id", 1]]
+  ↳ app/controllers/anals_controller.rb:7:in `uniq'
+  Rendering layout layouts/application.html.erb
+  Rendering anals/index.html.erb within layouts/application
+  Rendered anals/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1561)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1635)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 2713)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy_all", :controller=>"anals", :method=>:delete, :user_id=>"1"}):
+    10:   <% else %>
+    11:     <h3>Nothing searched yet😥</h3>
+    12:   <% end %>
+    13:   <%= link_to "Clear", :action => 'destroy_all', :method => :delete %>
+    14: </div>
+  
+app/views/anals/index.html.erb:13
+Started GET "/users/1/anals" for 127.0.0.1 at 2022-12-06 08:59:47 -0500
+Processing by AnalsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mAnal Load (0.4ms)[0m  [1m[34mSELECT "anals".* FROM "anals" WHERE "anals"."user_id" = $1 ORDER BY count DESC[0m  [["user_id", 1]]
+  ↳ app/controllers/anals_controller.rb:7:in `uniq'
+  Rendering layout layouts/application.html.erb
+  Rendering anals/index.html.erb within layouts/application
+  Rendered anals/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1891)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1974)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms | Allocations: 3664)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy_all", :controller=>"anals", :user_id=>"1"}):
+    10:   <% else %>
+    11:     <h3>Nothing searched yet😥</h3>
+    12:   <% end %>
+    13:   <%= link_to "Clear", :action => 'destroy_all' %>
+    14: </div>
+  
+app/views/anals/index.html.erb:13
+Started GET "/users/1/anals" for 127.0.0.1 at 2022-12-06 08:59:48 -0500
+Processing by AnalsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mAnal Load (0.3ms)[0m  [1m[34mSELECT "anals".* FROM "anals" WHERE "anals"."user_id" = $1 ORDER BY count DESC[0m  [["user_id", 1]]
+  ↳ app/controllers/anals_controller.rb:7:in `uniq'
+  Rendering layout layouts/application.html.erb
+  Rendering anals/index.html.erb within layouts/application
+  Rendered anals/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1503)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1578)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 2630)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy_all", :controller=>"anals", :user_id=>"1"}):
+    10:   <% else %>
+    11:     <h3>Nothing searched yet😥</h3>
+    12:   <% end %>
+    13:   <%= link_to "Clear", :action => 'destroy_all' %>
+    14: </div>
+  
+app/views/anals/index.html.erb:13
+Started GET "/users/1/anals" for 127.0.0.1 at 2022-12-06 08:59:49 -0500
+Processing by AnalsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mAnal Load (0.3ms)[0m  [1m[34mSELECT "anals".* FROM "anals" WHERE "anals"."user_id" = $1 ORDER BY count DESC[0m  [["user_id", 1]]
+  ↳ app/controllers/anals_controller.rb:7:in `uniq'
+  Rendering layout layouts/application.html.erb
+  Rendering anals/index.html.erb within layouts/application
+  Rendered anals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1500)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1573)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 2470)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy_all", :controller=>"anals", :user_id=>"1"}):
+    10:   <% else %>
+    11:     <h3>Nothing searched yet😥</h3>
+    12:   <% end %>
+    13:   <%= link_to "Clear", :action => 'destroy_all' %>
+    14: </div>
+  
+app/views/anals/index.html.erb:13
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 09:00:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.7ms | Allocations: 257)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 38.8ms | Allocations: 39126)
+  Rendered layout layouts/application.html.erb (Duration: 79.8ms | Allocations: 63030)
+Completed 200 OK in 100ms (Views: 79.5ms | ActiveRecord: 5.9ms | Allocations: 73005)
+
+
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 09:00:04 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 3019)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 5163)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 1.2ms | Allocations: 5640)
+
+
+Started GET "/users/1/anals" for 127.0.0.1 at 2022-12-06 09:00:05 -0500
+Processing by AnalsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mAnal Load (0.9ms)[0m  [1m[34mSELECT "anals".* FROM "anals" WHERE "anals"."user_id" = $1 ORDER BY count DESC[0m  [["user_id", 1]]
+  ↳ app/controllers/anals_controller.rb:7:in `uniq'
+  Rendering layout layouts/application.html.erb
+  Rendering anals/index.html.erb within layouts/application
+  Rendered anals/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 3354)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3446)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.7ms | Allocations: 7588)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"destroy_all", :controller=>"anals", :user_id=>"1"}):
+    10:   <% else %>
+    11:     <h3>Nothing searched yet😥</h3>
+    12:   <% end %>
+    13:   <%= link_to "Clear", :action => 'destroy_all' %>
+    14: </div>
+  
+app/views/anals/index.html.erb:13
