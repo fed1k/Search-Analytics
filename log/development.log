@@ -41285,3 +41285,76 @@ ActionView::Template::Error (No route matches {:action=>"destroy_all", :controll
     14: </div>
   
 app/views/anals/index.html.erb:13
+Started GET "/users/1/anals" for 127.0.0.1 at 2022-12-06 09:02:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnalsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mAnal Load (0.5ms)[0m  [1m[34mSELECT "anals".* FROM "anals" WHERE "anals"."user_id" = $1 ORDER BY count DESC[0m  [["user_id", 1]]
+  ↳ app/controllers/anals_controller.rb:7:in `uniq'
+  Rendering layout layouts/application.html.erb
+  Rendering anals/index.html.erb within layouts/application
+  Rendered anals/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 804)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 24700)
+Completed 200 OK in 65ms (Views: 45.0ms | ActiveRecord: 1.6ms | Allocations: 36654)
+
+
+Started GET "/users/1/anals" for 127.0.0.1 at 2022-12-06 09:02:09 -0500
+Processing by AnalsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mAnal Load (0.3ms)[0m  [1m[34mSELECT "anals".* FROM "anals" WHERE "anals"."user_id" = $1 ORDER BY count DESC[0m  [["user_id", 1]]
+  ↳ app/controllers/anals_controller.rb:7:in `uniq'
+  Rendering layout layouts/application.html.erb
+  Rendering anals/index.html.erb within layouts/application
+  Rendered anals/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2204)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 3336)
+
+
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 09:02:10 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.5ms | Allocations: 253)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 37527)
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 39736)
+Completed 200 OK in 50ms (Views: 38.8ms | ActiveRecord: 6.8ms | Allocations: 43089)
+
+
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 09:02:11 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2982)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 4954)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 1.0ms | Allocations: 5402)
+
+
