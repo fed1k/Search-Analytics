@@ -1,0 +1,13 @@
+<%= link_to "Back", user_articles_path(params[:user_id]) %>
+
+<h1>Search Analytics</h1>
+
+<div id="anals">
+  <% if @uniqAnals.any? %>
+    <% @uniqAnals.each do |anal| %>
+      <%= render anal %>
+    <% end %>
+  <% else %>
+    <h3>Nothing searched yet😥</h3>
+  <% end %>
+</div>

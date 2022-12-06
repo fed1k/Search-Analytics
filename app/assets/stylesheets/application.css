@@ -1,0 +1,106 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.article {
+  padding: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ }
+
+.search-form input {
+  outline: none;
+  border: none;
+  padding-left: 0.7rem;
+}
+
+.search-form {
+  display: flex;
+  border-radius: 1.3rem;
+  border: 1px solid black;
+  margin: 2rem 1rem;
+  padding: 0.5rem;
+  width: 200px;
+  transition: .4s ease-out;
+  align-items: center;
+}
+
+.search-form p {
+  display: none;
+  margin: 0;
+  font-size: 13px;
+}
+
+.article p:first-child {
+  font-weight: bolder;
+}
+
+.article > p::first-letter {
+  text-transform:capitalize;
+}
+
+.hide-article {
+  display: none;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  background-color: #E09305FF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.color-change {
+  background-color: #445A63FF;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal > div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0;
+}
+
+a {
+  color: black;
+}
+
+.modal-first-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+button[name="close-btn"] {
+  cursor: pointer;
+}
+
+#articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}

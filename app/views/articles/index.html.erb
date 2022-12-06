@@ -1,0 +1,41 @@
+<nav>
+
+  <% if params[:user_id] == "1" %>  
+  
+    <%= link_to "Search analytics", "/users/1/anals" %> 
+  
+  <% else %> 
+  
+     <%= link_to "Search analytics", "/users/2/anals" %> 
+  
+  <% end %> 
+  
+  <div class="profile-pic <%= "color-change" if params[:user_id] == "2" %>"><%= User.find(params[:user_id]).name[0] %></div>
+
+</nav>
+
+<dialog class="modal">
+<div class="modal-first-container">
+  <span>Users</span>
+  <button name="close-btn" type="button">X</button>
+</div>
+  <% User.all.each do |i| %>
+    <div>
+      <div class="profile-pic <%= "color-change" if i.id == 2 %>"><%= i.name[0] %></div>
+      <%= link_to i.name, user_articles_path(i.id) %>
+    </div>
+  <% end %>
+</dialog>
+
+<form accept-charset="UTF-8" class="search-form">
+  <p>🔍</p>
+  <input id="search" placeholder="Search articles" />
+</form>
+
+<h1>Articles</h1>
+
+<div id="articles">
+  <% @articles.each do |article| %>
+    <%= render article %>
+  <% end %>
+</div>
