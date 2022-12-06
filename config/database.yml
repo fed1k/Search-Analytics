@@ -23,6 +23,8 @@ default: &default
 
 development:
   <<: *default
+  username: postgres
+  password: fed1k2002
   database: analytics_development
 
   # The specified database role being used to connect to postgres.

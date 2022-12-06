@@ -43499,3 +43499,35 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.6ms | Allocations: 4650)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7870287281451616875)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7870287281451616875)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-12-06 15:38:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/users/1/articles
+Completed 302 Found in 20ms (ActiveRecord: 0.0ms | Allocations: 7130)
+
+
+Started GET "/users/1/articles" for 127.0.0.1 at 2022-12-06 15:38:34 -0500
+Processing by ArticlesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:13
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/articles/index.html.erb:22
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/articles/index.html.erb:38
+  Rendered articles/_article.html.erb (Duration: 1.5ms | Allocations: 257)
+  Rendered articles/_article.html.erb (Duration: 0.2ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.2ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 55.0ms | Allocations: 35324)
+  Rendered layout layouts/application.html.erb (Duration: 119.3ms | Allocations: 59440)
+Completed 200 OK in 149ms (Views: 124.6ms | ActiveRecord: 12.1ms | Allocations: 65890)
+
+
