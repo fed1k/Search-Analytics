@@ -49,12 +49,18 @@ class AnalsController < ApplicationController
 
   # DELETE /anals/1 or /anals/1.json
   def destroy
-    @anal.destroy
+    Anal.where(user_id: params[:user_id]).order('count DESC').destroy_all
+    redirect_to "/users/#{params[:user_id]}/articles"
+    # respond_to do |format|
+    #   format.html { redirect_to user_articles_path(params[:user_id]), notice: "Anal was successfully destroyed." }
+    #   format.json { head :no_content }
+    # end
+  end
 
-    respond_to do |format|
-      format.html { redirect_to anals_url, notice: "Anal was successfully destroyed." }
-      format.json { head :no_content }
-    end
+  def remove_all
+    Anal.where(user_id: params[:user_id]).order('count DESC').delete_all
+    flash[:notice] = "You have removed all results!"
+    redirect_to user_articles_path(params[:user_id])
   end
 
   private

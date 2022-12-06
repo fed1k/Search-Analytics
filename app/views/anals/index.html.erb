@@ -10,4 +10,5 @@
   <% else %>
     <h3>Nothing searched yet😥</h3>
   <% end %>
+  <%= link_to "Clear All", remove_all_user_anals_path(params[:user_id]), :method => :get %>
 </div>
